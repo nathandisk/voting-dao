@@ -1,0 +1,38 @@
+Setup Steps
+====================
+1. Clone the Repository
+
+git clone https://github.com/anandanajahudin/evote-solidity.git
+cd evote-solidity
+
+2. Install Dependencies
+
+cd backend
+npm install
+cd ../frontend
+npm install
+
+3. Start a Local Hardhat Node
+
+cd ../backend
+npx hardhat node
+
+4. Deploy Smart Contract
+
+cd backend
+npx hardhat run scripts/deploy.ts --network localhost
+
+5. Configure the Frontend
+
+Copy the ABI from backend/artifacts/contracts/YourContract.sol/YourContract.json to frontend/src/ABI/YourContract.json.
+
+Create a contract-address.json file in frontend/src/ABI/ with the following content:
+
+{
+"YourContract": "YOUR_CONTRACT_ADDRESS"
+}
+
+6. Run the Frontend
+npm start
+
+Access the app at http://localhost:3000.

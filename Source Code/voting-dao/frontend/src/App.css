@@ -1,0 +1,169 @@
+/* Global Styles & Theme */
+:root {
+  --primary-color: #4a90e2;
+  --primary-hover-color: #357abd;
+  --background-color: #f4f7f6;
+  --card-background-color: #ffffff;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Main App Container */
+.app-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Navigation */
+.nav {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--primary-hover-color);
+}
+
+/* Card for Proposals and other sections */
+.card {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- PERBAIKAN: Menambahkan input[type="password"] ke dalam selector --- */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.btn-secondary {
+  background-color: #e9ecef;
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background-color: #d8dde2;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Proposal List */
+.proposal-status {
+  font-weight: bold;
+}
+
+.status-open {
+  color: var(--success-color);
+}
+
+.status-closed {
+  color: #888;
+}
+
+.proposal-options ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Vote Section */
+.vote-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.warning-text {
+  color: var(--warning-color); 
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Register Page */
+.identity-code {
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  word-break: break-all;
+}
